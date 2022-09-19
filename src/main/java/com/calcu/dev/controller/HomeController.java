@@ -25,7 +25,16 @@ public class HomeController {
         if("+".equals(objCalculadora.getOperando())){
             resultado = objCalculadora.getOperador1() + objCalculadora.getOperador2();
         }
-
+        if("-".equals(objCalculadora.getOperando())){
+            resultado = objCalculadora.getOperador1() - objCalculadora.getOperador2();
+        }
+        if("*".equals(objCalculadora.getOperando())){
+            resultado = objCalculadora.getOperador1() * objCalculadora.getOperador2();
+        }
+        if("/".equals(objCalculadora.getOperando())){
+            resultado = objCalculadora.getOperador1() / objCalculadora.getOperador2();
+        }
+        
         String respuesta = "El resultado es: " + resultado;
         model.addAttribute("mensaje", respuesta);
         return "welcome";
